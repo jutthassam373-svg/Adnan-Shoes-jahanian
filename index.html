@@ -1,152 +1,79 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#10131b">
-<meta name="description" content="Shop shoes at ADNAN SHOES, Sadar Bazaar, Jahanian. Explore sneakers, sports shoes, formal shoes and sandals.">
+<meta name="description" content="Shop shoes at ADNAN SHOES, Sadar Bazaar, Jahanian.">
 <link rel="manifest" href="./manifest.json">
 <link rel="icon" href="./icon.svg" type="image/svg+xml">
 <title>ADNAN SHOES — JAHANIAN</title>
 
 <style>
-:root {
-  --dark:#10131b;
-  --gold:#ffc344;
-  --gold-dark:#a36b00;
-  --light:#f5f6f8;
-  --white:#fff;
-  --muted:#697080;
-  --green:#128c4a;
-}
+:root{--dark:#10131b;--gold:#ffc344;--gold-dark:#a36b00;--light:#f5f6f8;--muted:#697080}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{
-  margin:0;font-family:Arial,sans-serif;
-  background:var(--light);color:#171717
-}
-header{
-  position:sticky;top:0;z-index:10;
-  background:var(--dark);color:white;
-  padding:15px 6%;display:flex;
-  justify-content:space-between;align-items:center;
-  gap:15px;flex-wrap:wrap;
-  box-shadow:0 3px 18px #0002
-}
+body{margin:0;font-family:Arial,sans-serif;background:var(--light);color:#171717}
+header{position:sticky;top:0;z-index:10;background:var(--dark);color:white;padding:15px 6%;display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap;box-shadow:0 3px 18px #0002}
 .logo{font-size:25px;font-weight:900;letter-spacing:1px}
 .logo span{color:var(--gold)}
 header small{color:#d5d5d5;display:block;margin-top:5px}
 nav{display:flex;gap:17px;align-items:center;flex-wrap:wrap}
 nav a{color:white;text-decoration:none;font-size:14px;font-weight:bold}
 nav a:hover{color:var(--gold)}
-.install{
-  background:var(--gold);color:#171717;border:0;
-  border-radius:8px;padding:11px 15px;
-  font-weight:bold;cursor:pointer
-}
-.hero{
-  background:linear-gradient(120deg,#10131bf2,#10131bb5),
-  url('https://images.unsplash.com/photo-1495555961986-6d4c1ecb7be3?auto=format&fit=crop&w=1600&q=85')
-  center/cover;
-  color:white;padding:85px 7%;text-align:center
-}
-.badge{
-  display:inline-block;background:#f1f1f1;color:#292929;
-  padding:6px 10px;border-radius:5px;font-size:12px;
-  font-weight:bold
-}
+.install{background:var(--gold);color:#171717;border:0;border-radius:8px;padding:11px 15px;font-weight:bold;cursor:pointer}
+.hero{background:linear-gradient(120deg,#10131bf2,#10131bb5),url('https://images.unsplash.com/photo-1495555961986-6d4c1ecb7be3?auto=format&fit=crop&w=1600&q=85') center/cover;color:white;padding:85px 7%;text-align:center}
+.badge{display:inline-block;background:#f1f1f1;color:#292929;padding:6px 10px;border-radius:5px;font-size:12px;font-weight:bold}
 .hero h1{font-size:clamp(34px,6vw,65px);margin:20px 0 12px}
 .hero h1 span{color:var(--gold)}
 .hero p{font-size:17px;line-height:1.8;color:#eee}
 .address{font-weight:bold;color:var(--gold)!important}
-.search{
-  width:min(550px,100%);padding:15px;border:0;
-  border-radius:9px;font-size:16px;margin-top:15px;
-  outline:2px solid transparent
-}
-.search:focus{outline-color:var(--gold)}
-.hero-actions{
-  display:flex;justify-content:center;gap:12px;
-  flex-wrap:wrap;margin-top:18px
-}
-.action{
-  display:inline-block;padding:13px 18px;border-radius:8px;
-  text-decoration:none;font-weight:bold
-}
+.search{width:min(550px,100%);padding:15px;border:0;border-radius:9px;font-size:16px;margin-top:15px}
+.hero-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:18px}
+.action{display:inline-block;padding:13px 18px;border-radius:8px;text-decoration:none;font-weight:bold}
 .action-gold{background:var(--gold);color:#171717}
 .action-outline{border:1px solid #fff;color:#fff}
-.categories{
-  display:flex;justify-content:center;gap:10px;
-  flex-wrap:wrap;padding:25px 10px 0
-}
-.categories button{
-  background:#fff;color:#222;border:1px solid #ddd;
-  padding:11px 17px;border-radius:25px;cursor:pointer
-}
-.categories button.active,.categories button:hover{
-  background:var(--dark);color:white
-}
+.categories{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;padding:25px 10px 0}
+.categories button{background:#fff;color:#222;border:1px solid #ddd;padding:11px 17px;border-radius:25px;cursor:pointer}
+.categories button.active,.categories button:hover{background:var(--dark);color:white}
 .section-title{text-align:center;margin:40px 10px 8px;font-size:30px}
 .subtitle{text-align:center;color:var(--muted);margin:0 10px 25px}
-.products{
-  display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:22px;padding:20px 6% 55px
-}
-.card{
-  background:white;border-radius:14px;overflow:hidden;
-  box-shadow:0 5px 20px #00000012;transition:transform .2s
-}
+.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px;padding:20px 6% 55px}
+.card{background:white;border-radius:14px;overflow:hidden;box-shadow:0 5px 20px #00000012;transition:transform .2s}
 .card:hover{transform:translateY(-4px)}
 .card img{width:100%;height:220px;object-fit:cover;background:#eee}
 .info{padding:17px}
 .info h3{margin:12px 0 9px;font-size:18px}
 .price{font-size:22px;font-weight:bold;color:var(--gold-dark);margin:10px 0}
 .info p{color:#666;font-size:14px;line-height:1.6}
-.btn{
-  display:block;width:100%;padding:13px;border:0;
-  border-radius:7px;background:var(--dark);color:white;
-  text-align:center;text-decoration:none;font-size:14px;
-  font-weight:bold;cursor:pointer;margin-top:12px
-}
+.btn{display:block;width:100%;padding:13px;border:0;border-radius:7px;background:var(--dark);color:white;text-align:center;text-decoration:none;font-size:14px;font-weight:bold;cursor:pointer;margin-top:12px}
 .btn:hover{background:#35415a}
-.contact{
-  background:var(--gold);text-align:center;padding:40px 15px
-}
+.contact{background:var(--gold);text-align:center;padding:40px 15px}
 .contact h2{margin-top:0}
 .contact p{line-height:1.7}
-.contact a{
-  display:inline-block;background:var(--dark);color:white;
-  text-decoration:none;padding:14px 24px;border-radius:8px;
-  font-weight:bold;margin:6px
-}
+.contact a{display:inline-block;background:var(--dark);color:white;text-decoration:none;padding:14px 24px;border-radius:8px;font-weight:bold;margin:6px}
 .contact .address-line{font-weight:bold}
-footer{
-  background:var(--dark);color:white;text-align:center;padding:30px 15px
-}
+footer{background:var(--dark);color:white;text-align:center;padding:30px 15px}
 footer p{color:#ccc;line-height:1.7}
 .footer-address{color:var(--gold)}
 .empty{text-align:center;padding:25px;grid-column:1/-1}
-.note{
-  max-width:900px;margin:0 auto 35px;padding:0 20px;
-  color:#626977;font-size:13px;line-height:1.6;text-align:center
-}
+.note{max-width:900px;margin:0 auto 35px;padding:0 20px;color:#626977;font-size:13px;line-height:1.6;text-align:center}
+.status{text-align:center;padding:15px;color:#555}
 @media(max-width:600px){
-  header{justify-content:center;text-align:center;padding:14px 4%}
-  nav{justify-content:center;gap:13px}
-  .hero{padding:60px 5%}
-  .products{padding:18px 4%;gap:13px;grid-template-columns:repeat(2,minmax(0,1fr))}
-  .card img{height:155px}
-  .info{padding:11px}
-  .info h3{font-size:15px}
-  .price{font-size:18px}
-  .info p{font-size:12px}
-  .btn{font-size:12px;padding:11px 5px}
-  .logo{font-size:23px}
+header{justify-content:center;text-align:center;padding:14px 4%}
+nav{justify-content:center;gap:13px}
+.hero{padding:60px 5%}
+.products{padding:18px 4%;gap:13px;grid-template-columns:repeat(2,minmax(0,1fr))}
+.card img{height:155px}
+.info{padding:11px}
+.info h3{font-size:15px}
+.price{font-size:18px}
+.info p{font-size:12px}
+.btn{font-size:12px;padding:11px 5px}
+.logo{font-size:23px}
 }
-@media(max-width:360px){
-  .products{grid-template-columns:1fr}
-  .card img{height:210px}
-}
+@media(max-width:360px){.products{grid-template-columns:1fr}.card img{height:210px}}
 </style>
 </head>
 
@@ -167,14 +94,9 @@ footer p{color:#ccc;line-height:1.7}
 <section class="hero" id="home">
   <span class="badge">WELCOME TO OUR STORE</span>
   <h1>STEP INTO <span>YOUR STYLE</span></h1>
-  <p>
-    Discover your next favourite pair.<br>
-    Quality styles for everyday comfort.
-  </p>
+  <p>Discover your next favourite pair.<br>Quality styles for everyday comfort.</p>
   <p class="address">📍 Sadar Bazaar, Jahanian</p>
-  <input id="search" class="search"
-    placeholder="🔎 Search sneakers, sandals, formal shoes..."
-    aria-label="Search shoes">
+  <input id="search" class="search" placeholder="🔎 Search sneakers, sandals, formal shoes..." aria-label="Search shoes">
   <div class="hero-actions">
     <a class="action action-gold" href="#collection">Explore Collection</a>
     <a class="action action-outline" href="#contact">Contact the Shop</a>
@@ -192,20 +114,15 @@ footer p{color:#ccc;line-height:1.7}
 
 <h2 class="section-title" id="collection">OUR COLLECTION</h2>
 <p class="subtitle">Explore our footwear collection</p>
-
+<p id="loadStatus" class="status">Loading shoes from our shop...</p>
 <main class="products" id="products"></main>
-
-<p class="note">
-  Product photos and prices are examples for demonstration.
-  Please confirm actual prices, sizes and stock with ADNAN SHOES before ordering.
-</p>
+<p class="note">Please confirm actual prices, sizes and availability with ADNAN SHOES before ordering.</p>
 
 <section class="contact" id="contact">
   <h2>NEED HELP CHOOSING?</h2>
   <p>Ask us about available shoes, sizes and prices on WhatsApp.</p>
   <p class="address-line">📍 Sadar Bazaar, Jahanian</p>
-  <a id="contactButton" href="https://wa.me/923128622153"
-     target="_blank" rel="noopener">💬 CONTACT ON WHATSAPP</a>
+  <a id="contactButton" href="https://wa.me/923128622153" target="_blank" rel="noopener">💬 CONTACT ON WHATSAPP</a>
   <p>WhatsApp: 0312-8622153</p>
 </section>
 
@@ -217,57 +134,39 @@ footer p{color:#ccc;line-height:1.7}
   <small>Prices, sizes and availability must be confirmed with the shop.</small>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="./supabase-config.js"></script>
 <script>
 "use strict";
 
-// Pakistan WhatsApp number: country code + digits, without the first zero.
 const SHOP_WHATSAPP = "923128622153";
-
-const shoes = [
-  {name:"Classic Red Sneakers",category:"Sneakers",price:2500,size:"40–44",img:"photo-1542291026-7eec264c27ff"},
-  {name:"Street Style Sneakers",category:"Sneakers",price:2800,size:"39–44",img:"photo-1525966222134-fcfa99b8ae77"},
-  {name:"Everyday Sports Shoes",category:"Sports",price:3200,size:"40–45",img:"photo-1460353581641-37baddab0fa2"},
-  {name:"Running Performance Shoes",category:"Sports",price:3500,size:"40–45",img:"photo-1552674605-db6ffd4facb5"},
-  {name:"Classic Casual Shoes",category:"Casual",price:2200,size:"39–44",img:"photo-1495555961986-6d4c1ecb7be3"},
-  {name:"Premium White Sneakers",category:"Sneakers",price:3000,size:"40–44",img:"photo-1600185365483-26d7a4cc7519"},
-  {name:"Daily Comfort Shoes",category:"Casual",price:2400,size:"39–44",img:"photo-1542291026-7eec264c27ff"},
-  {name:"Modern Sports Sneakers",category:"Sports",price:3800,size:"40–45",img:"photo-1552346154-21d32810aba3"},
-  {name:"Formal Office Shoes",category:"Formal",price:4000,size:"40–44",img:"photo-1614252369475-531eba835eb1"},
-  {name:"Classic Black Formal",category:"Formal",price:4500,size:"40–45",img:"photo-1614252369475-531eba835eb1"},
-  {name:"Comfort Sandals",category:"Sandals",price:1500,size:"40–45",img:"photo-1603487742131-4160ec999306"},
-  {name:"Everyday Casual Sneakers",category:"Casual",price:2600,size:"39–44",img:"photo-1525966222134-fcfa99b8ae77"}
-].map(shoe => ({
-  ...shoe,
-  img:`https://images.unsplash.com/${shoe.img}?auto=format&fit=crop&w=700&q=80`
-}));
-
+const area = document.getElementById("products");
+const statusBox = document.getElementById("loadStatus");
+let shoes = [];
 let selectedCategory = "All";
 
 function openWhatsApp(message) {
-  const url = "https://wa.me/" + SHOP_WHATSAPP +
-              "?text=" + encodeURIComponent(message);
+  const url = "https://wa.me/" + SHOP_WHATSAPP + "?text=" + encodeURIComponent(message);
   window.open(url, "_blank", "noopener,noreferrer");
 }
 
+function contactShop() {
+  openWhatsApp("Assalam-o-Alaikum! I would like to ask about shoes, sizes and prices at ADNAN SHOES, Sadar Bazaar, Jahanian.");
+}
+
 function orderProduct(shoe) {
-  const message =
-`Assalam-o-Alaikum! I want to ask about a product at ADNAN SHOES.
+  const message = `Assalam-o-Alaikum! I want to ask about a product at ADNAN SHOES.
 
 Product: ${shoe.name}
 Category: ${shoe.category}
-Price shown: Rs. ${shoe.price.toLocaleString("en-PK")}
-Available sizes shown: ${shoe.size}
+Price shown: Rs. ${Number(shoe.price).toLocaleString("en-PK")}
+Available sizes: ${shoe.size}
+Stock shown: ${shoe.stock}
 
 Is this product available? Please confirm its actual price and sizes.
 
 Shop: ADNAN SHOES, Sadar Bazaar, Jahanian.`;
   openWhatsApp(message);
-}
-
-function contactShop() {
-  openWhatsApp(
-    "Assalam-o-Alaikum! I would like to ask about shoes, sizes and prices at ADNAN SHOES, Sadar Bazaar, Jahanian."
-  );
 }
 
 function setCategory(category, button) {
@@ -280,19 +179,19 @@ function setCategory(category, button) {
 
 function showProducts() {
   const query = document.getElementById("search").value.trim().toLowerCase();
-  const area = document.getElementById("products");
   area.replaceChildren();
 
   const filtered = shoes.filter(shoe =>
-    (selectedCategory === "All" || shoe.category === selectedCategory) &&
-    (shoe.name.toLowerCase().includes(query) ||
-     shoe.category.toLowerCase().includes(query))
+    (selectedCategory === "All" || shoe.category.toLowerCase() === selectedCategory.toLowerCase()) &&
+    (`${shoe.name} ${shoe.category} ${shoe.description}`.toLowerCase().includes(query))
   );
 
   if (!filtered.length) {
     const message = document.createElement("p");
     message.className = "empty";
-    message.textContent = "No shoes found. Try another search or category.";
+    message.textContent = shoes.length
+      ? "No shoes found. Try another search or category."
+      : "No products have been added yet. Please check back soon.";
     area.appendChild(message);
     return;
   }
@@ -302,7 +201,7 @@ function showProducts() {
     card.className = "card";
 
     const img = document.createElement("img");
-    img.src = shoe.img;
+    img.src = shoe.img || "https://placehold.co/600x400/f0f0f0/222?text=ADNAN+SHOES";
     img.alt = shoe.name;
     img.loading = "lazy";
     img.onerror = () => {
@@ -322,38 +221,95 @@ function showProducts() {
 
     const price = document.createElement("div");
     price.className = "price";
-    price.textContent = "Rs. " + shoe.price.toLocaleString("en-PK");
+    price.textContent = "Rs. " + Number(shoe.price).toLocaleString("en-PK");
 
     const size = document.createElement("p");
-    size.textContent = "Sizes shown: " + shoe.size;
+    size.textContent = "Sizes: " + (shoe.size || "Please ask the shop");
+
+    const stock = document.createElement("p");
+    stock.textContent = Number(shoe.stock) > 0
+      ? "In stock: " + shoe.stock
+      : "Please ask the shop about availability";
+
+    const description = document.createElement("p");
+    description.textContent = shoe.description || "";
 
     const button = document.createElement("button");
     button.className = "btn";
     button.textContent = "ORDER ON WHATSAPP";
     button.addEventListener("click", () => orderProduct(shoe));
 
-    info.append(badge, title, price, size, button);
+    info.append(badge, title, price, size, stock);
+    if (shoe.description) info.appendChild(description);
+    info.appendChild(button);
     card.append(img, info);
     area.appendChild(card);
   });
 }
 
+async function loadProducts() {
+  statusBox.textContent = "Loading shoes from our shop...";
+
+  if (!window.supabase || !window.SUPABASE_URL || !window.SUPABASE_PUBLISHABLE_KEY) {
+    statusBox.textContent = "Website configuration error. Please contact the shop.";
+    console.error("Supabase configuration is missing. Check supabase-config.js.");
+    shoes = [];
+    showProducts();
+    return;
+  }
+
+  try {
+    const client = window.supabase.createClient(
+      window.SUPABASE_URL,
+      window.SUPABASE_PUBLISHABLE_KEY
+    );
+
+    const { data, error } = await client
+      .from("products")
+      .select("id,name,category,price,sizes,stock,image_url,description,active")
+      .eq("active", true)
+      .order("created_at", { ascending: false });
+
+    if (error) throw error;
+
+    shoes = (data || []).map(item => ({
+      id: item.id,
+      name: item.name || "Unnamed shoes",
+      category: item.category || "Casual",
+      price: Number(item.price) || 0,
+      size: Array.isArray(item.sizes) ? item.sizes.join(", ") : (item.sizes || "Ask shop"),
+      stock: Number(item.stock) || 0,
+      img: item.image_url || "",
+      description: item.description || ""
+    }));
+
+    statusBox.textContent = shoes.length
+      ? "Showing " + shoes.length + " product(s) from ADNAN SHOES."
+      : "No products in the database yet. Ask the shop to add products in the Admin Panel.";
+
+    showProducts();
+  } catch (error) {
+    console.error("Could not load products:", error);
+    statusBox.textContent = "Could not load products. Please try again later.";
+    area.replaceChildren();
+    const message = document.createElement("p");
+    message.className = "empty";
+    message.textContent = "Products could not be loaded. Please refresh the page or contact the shop.";
+    area.appendChild(message);
+  }
+}
+
 document.getElementById("search").addEventListener("input", showProducts);
-
 document.querySelectorAll(".categories button").forEach(button => {
-  button.addEventListener("click", () => {
-    setCategory(button.dataset.category, button);
-  });
+  button.addEventListener("click", () => setCategory(button.dataset.category, button));
 });
-
 document.getElementById("contactButton").addEventListener("click", event => {
   event.preventDefault();
   contactShop();
 });
 
-showProducts();
+loadProducts();
 
-// PWA installation prompt: shown only when supported by the browser.
 let installPrompt = null;
 const installButton = document.getElementById("installButton");
 
@@ -368,7 +324,6 @@ installButton.addEventListener("click", async () => {
     alert("To install, open your browser menu and choose 'Install app' or 'Add to Home Screen'.");
     return;
   }
-
   installPrompt.prompt();
   await installPrompt.userChoice;
   installPrompt = null;
@@ -379,7 +334,6 @@ window.addEventListener("appinstalled", () => {
   installButton.hidden = true;
 });
 
-// Register the service worker for supported HTTPS hosting.
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
     navigator.serviceWorker.register("./sw.js").catch(error => {
