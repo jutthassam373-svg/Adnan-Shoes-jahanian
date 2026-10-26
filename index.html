@@ -7,105 +7,171 @@
 <title>ADNAN SHOES — JAHANIAN</title>
 <style>
 *{box-sizing:border-box}
-body{margin:0;font-family:Arial,sans-serif;background:#f5f6fa;color:#171717}
-header{background:#101522;color:white;padding:22px 6%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px}
-.logo{font-size:25px;font-weight:900;letter-spacing:1px}
-.logo span{color:#ffbd39}
-header p{margin:6px 0 0;color:#d4d8e2;font-size:13px}
-.hero{padding:65px 7%;background:linear-gradient(120deg,#101522,#29334b);color:white;text-align:center}
-.hero h1{font-size:clamp(30px,5vw,55px);margin:0 0 15px}
-.hero h1 span{color:#ffbd39}
-.hero p{color:#d8dce5;font-size:17px}
-.search{width:min(500px,100%);padding:14px;border:0;border-radius:8px;margin-top:18px;font-size:16px}
-h2{text-align:center;margin:38px 0 10px}
-.sub{text-align:center;color:#666;margin-bottom:25px}
+body{margin:0;font-family:Arial,sans-serif;background:#f6f6f6;color:#171717}
+header{background:#10131b;color:white;padding:20px 6%;display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}
+.logo{font-size:26px;font-weight:900;letter-spacing:1px}
+.logo span{color:#f8b82e}
+header small{color:#ddd;display:block;margin-top:6px}
+nav{display:flex;gap:17px;flex-wrap:wrap}
+nav a{color:white;text-decoration:none;font-weight:bold;font-size:14px}
+.hero{background:linear-gradient(120deg,#111522dd,#111522bb),url('https://images.unsplash.com/photo-1495555961986-6d4c1ecb7be3?auto=format&fit=crop&w=1600&q=85') center/cover;color:white;padding:85px 7%;text-align:center}
+.hero h1{font-size:clamp(34px,6vw,65px);margin:0}
+.hero h1 span{color:#ffc344}
+.hero p{font-size:17px;line-height:1.7}
+.search{width:min(550px,100%);padding:15px;border:0;border-radius:8px;font-size:16px;margin-top:15px}
+.categories{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;padding:25px 10px 0}
+.categories button{background:#fff;color:#222;border:1px solid #ddd;padding:11px 17px;border-radius:25px;cursor:pointer}
+.categories button.active,.categories button:hover{background:#111827;color:white}
+.section-title{text-align:center;margin:40px 10px 8px;font-size:30px}
+.subtitle{text-align:center;color:#777;margin:0 10px 25px}
 .products{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px;padding:20px 6% 55px}
-.card{background:white;border-radius:14px;overflow:hidden;box-shadow:0 5px 20px #00000010}
-.card img{width:100%;height:200px;object-fit:cover;background:#eee}
+.card{background:white;border-radius:14px;overflow:hidden;box-shadow:0 5px 20px #00000012;transition:.2s}
+.card:hover{transform:translateY(-4px)}
+.card img{width:100%;height:220px;object-fit:cover;background:#eee}
 .info{padding:17px}
-.info h3{margin:0 0 8px}
-.price{font-size:22px;font-weight:bold;color:#b87900}
+.info h3{margin:0 0 9px;font-size:18px}
+.price{font-size:22px;font-weight:bold;color:#a36b00;margin:8px 0}
 .info p{color:#666;font-size:14px}
-button,.btn{display:block;width:100%;padding:12px;border:0;border-radius:7px;background:#152039;color:white;text-decoration:none;text-align:center;font-size:15px;cursor:pointer;margin-top:12px}
-button:hover,.btn:hover{background:#304469}
-footer{text-align:center;background:#101522;color:white;padding:27px}
-footer p{color:#d4d8e2}
-.note{text-align:center;padding:0 20px 30px;color:#777;font-size:13px}
+.btn{display:block;width:100%;padding:13px;border:0;border-radius:7px;background:#111827;color:white;text-align:center;text-decoration:none;font-size:14px;cursor:pointer;margin-top:12px}
+.btn:hover{background:#35415a}
+.contact{background:#ffbd39;text-align:center;padding:38px 15px}
+.contact h2{margin-top:0}
+.contact a{display:inline-block;background:#10131b;color:white;text-decoration:none;padding:14px 24px;border-radius:8px;font-weight:bold}
+footer{background:#10131b;color:white;text-align:center;padding:30px 15px}
+footer p{color:#ccc}
+.badge{display:inline-block;background:#f1f1f1;padding:5px 9px;border-radius:5px;font-size:12px}
+.empty{text-align:center;padding:25px}
+@media(max-width:600px){header{justify-content:center;text-align:center}.hero{padding:60px 5%}.products{padding:18px 4%;gap:13px}.card img{height:175px}.info{padding:12px}.logo{font-size:23px}}
 </style>
 </head>
 <body>
+
 <header>
-  <div>
-    <div class="logo"><span>ADNAN</span> SHOES</div>
-    <p>JAHANIAN • FOOTWEAR COLLECTION</p>
-  </div>
-  <div>👟 Style • Comfort • Quality</div>
+ <div>
+  <div class="logo"><span>ADNAN</span> SHOES</div>
+  <small>JAHANIAN • FOOTWEAR STORE</small>
+ </div>
+ <nav>
+  <a href="#home">Home</a>
+  <a href="#collection">Collection</a>
+  <a href="#contact">Contact</a>
+ </nav>
 </header>
 
-<section class="hero">
-  <h1>STEP INTO <span>YOUR STYLE</span></h1>
-  <p>Discover your next favourite pair at ADNAN SHOES — JAHANIAN.</p>
-  <input class="search" id="search" type="search" placeholder="Search shoes..." oninput="filterProducts()">
+<section class="hero" id="home">
+ <span class="badge">WELCOME TO OUR STORE</span>
+ <h1>STEP INTO <span>YOUR STYLE</span></h1>
+ <p>Discover your next favourite pair.<br>Style, comfort and everyday fashion at ADNAN SHOES.</p>
+ <input id="search" class="search" placeholder="🔎 Search sneakers, sandals, formal shoes..." oninput="showProducts()">
 </section>
 
-<h2>OUR SHOE COLLECTION</h2>
-<p class="sub">Explore our sample collection. Prices are for demonstration.</p>
+<div class="categories">
+ <button class="active" onclick="setCategory('All',this)">All Shoes</button>
+ <button onclick="setCategory('Sneakers',this)">Sneakers</button>
+ <button onclick="setCategory('Sports',this)">Sports</button>
+ <button onclick="setCategory('Formal',this)">Formal</button>
+ <button onclick="setCategory('Sandals',this)">Sandals</button>
+ <button onclick="setCategory('Casual',this)">Casual</button>
+</div>
+
+<h2 class="section-title" id="collection">OUR COLLECTION</h2>
+<p class="subtitle">Find your style • Sample products and prices</p>
 
 <main class="products" id="products"></main>
-<p class="note">Sample products and prices only. Contact the shop to confirm availability.</p>
+
+<section class="contact" id="contact">
+ <h2>NEED HELP CHOOSING?</h2>
+ <p>Contact ADNAN SHOES, Jahanian, for product availability and prices.</p>
+ <a id="contactButton" href="#" onclick="return contactShop(event)">CONTACT ON WHATSAPP</a>
+</section>
 
 <footer>
-  <h2>ADNAN SHOES — JAHANIAN</h2>
-  <p>Thank you for visiting our store!</p>
-  <p>Website developed by Hassam Jutt ❤️</p>
+ <div class="logo"><span>ADNAN</span> SHOES</div>
+ <p>JAHANIAN • YOUR EVERYDAY FOOTWEAR STORE</p>
+ <p>Website made by Hassam Jutt ❤️</p>
+ <small>Sample catalogue. Please confirm actual prices, sizes and stock with the shop.</small>
 </footer>
 
 <script>
-const shoes = [
- {name:"Classic Sneakers",price:2500,size:"Sizes 40–44",image:"https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=80"},
- {name:"Everyday Sports Shoes",price:3200,size:"Sizes 40–45",image:"https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=80"},
- {name:"Casual Street Shoes",price:2800,size:"Sizes 39–44",image:"https://images.unsplash.com/photo-1495555961986-6d4c1ecb7be3?auto=format&fit=crop&w=700&q=80"},
- {name:"Comfort Running Shoes",price:3500,size:"Sizes 40–45",image:"https://images.unsplash.com/photo-1460353581641-37baddab0fa2?auto=format&fit=crop&w=700&q=80"},
- {name:"Daily Wear Sneakers",price:2200,size:"Sizes 39–44",image:"https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=700&q=80"},
- {name:"Premium Style Shoes",price:4000,size:"Sizes 40–45",image:"https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=80"}
-];
+// IMPORTANT: Replace this with the shop's WhatsApp number.
+// Use country code, digits only. Pakistan example format: 923001234567
+const SHOP_WHATSAPP = "923001234567";
 
-function render(list){
+const shoes = [
+ {name:"Classic Red Sneakers",category:"Sneakers",price:2500,size:"40–44",img:"photo-1542291026-7eec264c27ff"},
+ {name:"Street Style Sneakers",category:"Sneakers",price:2800,size:"39–44",img:"photo-1525966222134-fcfa99b8ae77"},
+ {name:"Everyday Sports Shoes",category:"Sports",price:3200,size:"40–45",img:"photo-1460353581641-37baddab0fa2"},
+ {name:"Running Performance Shoes",category:"Sports",price:3500,size:"40–45",img:"photo-1552674605-db6ffd4facb5"},
+ {name:"Classic Casual Shoes",category:"Casual",price:2200,size:"39–44",img:"photo-1495555961986-6d4c1ecb7be3"},
+ {name:"Premium White Sneakers",category:"Sneakers",price:3000,size:"40–44",img:"photo-1600185365483-26d7a4cc7519"},
+ {name:"Daily Comfort Shoes",category:"Casual",price:2400,size:"39–44",img:"photo-153 รองเท"},
+ {name:"Modern Sports Sneakers",category:"Sports",price:3800,size:"40–45",img:"photo-1552346154-21d32810aba3"},
+ {name:"Formal Office Shoes",category:"Formal",price:4000,size:"40–44",img:"photo-1614252369475-531eba835eb1"},
+ {name:"Classic Black Formal",category:"Formal",price:4500,size:"40–45",img:"photo-1614252369475-531eba835eb1"},
+ {name:"Comfort Sandals",category:"Sandals",price:1500,size:"40–45",img:"photo-1603487742131-4160ec999306"},
+ {name:"Everyday Casual Sneakers",category:"Casual",price:2600,size:"39–44",img:"photo-1495555961986-6d4c1ecb7be3"}
+].map(s=>({...s,img:`https://images.unsplash.com/${s.img}?auto=format&fit=crop&w=700&q=80`}));
+
+let category="All";
+
+function setCategory(value,button){
+ category=value;
+ document.querySelectorAll(".categories button").forEach(b=>b.classList.remove("active"));
+ button.classList.add("active");
+ showProducts();
+}
+
+function orderProduct(shoe){
+ const message=`Assalam-o-Alaikum! I want to ask about:\nProduct: ${shoe.name}\nPrice shown: Rs. ${shoe.price}\nSize: ${shoe.size}\nIs this product available?`;
+ openWhatsApp(message);
+}
+
+function openWhatsApp(message){
+ if(!/^[1-9][0-9]{9,14}$/.test(SHOP_WHATSAPP)){
+  alert("Please add the shop's correct WhatsApp number in the website code.");
+  return;
+ }
+ window.open("https://wa.me/"+SHOP_WHATSAPP+"?text="+encodeURIComponent(message),"_blank");
+}
+
+function contactShop(event){
+ event.preventDefault();
+ openWhatsApp("Assalam-o-Alaikum! I would like to know about shoes available at ADNAN SHOES, Jahanian.");
+ return false;
+}
+
+function showProducts(){
+ const query=document.getElementById("search").value.toLowerCase();
+ const filtered=shoes.filter(s=>
+  (category==="All"||s.category===category) &&
+  s.name.toLowerCase().includes(query)
+ );
  const area=document.getElementById("products");
  area.innerHTML="";
- if(!list.length){area.innerHTML="<p>No shoes found. Try another search.</p>";return}
- list.forEach(shoe=>{
+ if(!filtered.length){
+  area.innerHTML='<p class="empty">No shoes found. Try another search.</p>';
+  return;
+ }
+ filtered.forEach(shoe=>{
   const card=document.createElement("article");
   card.className="card";
   const img=document.createElement("img");
-  img.src=shoe.image;
+  img.src=shoe.img;
   img.alt=shoe.name;
   img.loading="lazy";
+  img.onerror=()=>{img.src="https://placehold.co/600x400/f0f0f0/222?text=ADNAN+SHOES"};
   const info=document.createElement("div");
   info.className="info";
-  const name=document.createElement("h3");
-  name.textContent=shoe.name;
-  const price=document.createElement("div");
-  price.className="price";
-  price.textContent="Rs. "+shoe.price.toLocaleString("en-PK");
-  const size=document.createElement("p");
-  size.textContent=shoe.size;
-  const order=document.createElement("button");
-  order.textContent="Order on WhatsApp";
-  order.onclick=()=> {
-    const message="Assalam-o-Alaikum! I am interested in "+shoe.name+" (Rs. "+shoe.price+"). Is it available?";
-    alert("WhatsApp ordering will be activated after the shop's WhatsApp number is added.\n\nProduct: "+shoe.name);
-  };
-  info.append(name,price,size,order);
+  info.innerHTML=`<span class="badge">${shoe.category}</span><h3></h3><div class="price"></div><p></p><button class="btn">ORDER ON WHATSAPP</button>`;
+  info.querySelector("h3").textContent=shoe.name;
+  info.querySelector(".price").textContent="Rs. "+shoe.price.toLocaleString("en-PK");
+  info.querySelector("p").textContent="Available sizes: "+shoe.size;
+  info.querySelector("button").onclick=()=>orderProduct(shoe);
   card.append(img,info);
   area.append(card);
  });
 }
-function filterProducts(){
- const q=document.getElementById("search").value.toLowerCase();
- render(shoes.filter(s=>s.name.toLowerCase().includes(q)));
-}
-render(shoes);
+showProducts();
 </script>
 </body>
 </html>
